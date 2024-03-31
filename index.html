@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentación especificación de requerimientos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <hl>Lenguaje de Modelado Unificado UML</hl>
+    <img
+      src="Almacenes Muebles del Sur.jpg"
+      alt="Caso de uso del proyecto formativo almacenes muebles del sur"
+    />
+    <img
+      src="Modelado de requisitos.PNG"
+      alt="Participación en el foro de canvas"
+    />
+    <h2>Resumen de las lecturas sugeridas</h2>
+    <h3>INGENIERIA DE REQUERIMIENTOS</h3>
+    <p>
+      En la ciencia de la Ingeniería de Sistemas y desarrollo de software, la
+      Ingeniería de Requisitos abarca todo aquello que se relaciona con la
+      determinación y recolección de las necesidades y condiciones que se
+      requieren para que el software ya sea nuevo o en mantenimiento pueda
+      satisfacer las condiciones óptimas de trabajo establecidas en un proyecto
+      de desarrollo de software. Antes de continuar con el desarrollo del tema
+      propuesto, se deberá entender qué es un requisito. Pues bien, ya que la
+      Ingeniería de Requisitos se encarga de recopilar, organizar, estudiar y
+      comprobar las necesidades del cliente, se puede definir con gran validez
+      al requisito como cada una de dichas necesidades puntuales que tiene cada
+      cliente. Todos los requisitos funcionales son mensurables en su cantidad y
+      operación, ya que permiten definir comportamientos muy precisos por lo que
+      en ocasiones también se les conoce como requisitos de comportamiento y
+      permiten modelar el sistema como tal, puesto que, cada uno de estos puede
+      significar uno o varios casos de uso. Son un requisito normalmente de
+      calidad o medición que genera criterios utilizados para calificar la
+      operación de un sistema, una funcionalidad especificada o un
+      comportamiento, por lo que estos suelen ser complementos de los
+      requerimientos funcionales.
+    </p>
+    <h4>Técnicas de recolección de información</h4>
+    <p>
+      En la Ingeniería de Requisitos, existen múltiples técnicas para realizar
+      la recolección de información de la que se obtendrán los requisitos del
+      sistema y por ende el respectivo modelo o diagrama de casos de uso, cabe
+      resaltar que cada una de dichas técnicas puede ser usada de forma
+      arbitraria por parte del analista que se encarga de esta tarea. Las
+      técnicas de recolección de información se conforman por una serie de
+      elementos que permiten la comunicación entre las partes interesadas y
+      ayudan a trasmitir tanto el problema que se desea solucionar como los
+      requerimientos que hace el cliente a los desarrolladores. Es una técnica
+      muy utilizada, tanto así que se puede decir que es indispensable en toda
+      fase de obtención de requisitos ya que en esta se puede identificar con
+      claridad las necesidades puntuales mediante preguntas preparadas
+      previamente para este propósito. Esta selección de las personas puede
+      tener un modelo top-down en la organización ya que se puede iniciar con
+      los ejecutivos de alto nivel para poder tener una vista global del
+      problema y terminar en el personal operativo ya que estos conocen la
+      operación del cliente en su esencia. Al finalizar la entrevista, se
+      recomienda realizar una recapitulación de toda la información obtenida,
+      esto permite verificar las respuestas y en ocasiones algunos elementos que
+      se olvidaron, pueden aparecer y formar parte de los requisitos.
+    </p>
+    <h5>Análisis de la entrevista</h5>
+    <p>
+      La idea detrás de esta técnica es realizar reuniones donde se desarrolla
+      una lluvia de ideas propiciando un ambiente libre de críticas en el que se
+      generan varios puntos de vista del problema y las posibles soluciones al
+      mismo. Estas sesiones de lluvia de ideas deben estar formadas con grupos
+      pequeños de personas donde una de ellas debe hacer de jefe y moderador de
+      la misma.
+    </p>
+    <h2>Los casos de uso</h2>
+    <p>
+      La idea detrás del caso de uso es hacer un modelo base del sistema en el
+      que se especifican las relaciones de los actores con la funcionalidad del
+      sistema, en este orden de ideas, el caso de uso está compuesto por los
+      requisitos funcionales, o bien se generan requisitos desde el caso de uso,
+      o se crea a partir de los ya obtenidos y aun así generan más requisitos
+      funcionales de los ya establecidos siendo esto el caso más común. Los
+      actores los hay de dos tipos que en ambos casos se representan de la misma
+      forma Es una relación que incorpora directamente el comportamiento de otro
+      caso de uso en algún lugar de la secuencia del caso principal, la relación
+      de inclusión sirve para compartir y complementar una funcionalidad entre
+      casos de uso, el caso de uso incluido existe y responde únicamente con
+      este propósito ya que no responde a un objetivo de un actor de manera
+      directa. La relación de extensión incorpora de manera indirecta el
+      comportamiento de un caso de uso en el lugar especificado de la secuencia
+      de acciones de otro caso determinado. En el caso de uso base, la extensión
+      se hace en un punto concreto y previamente especificado en el momento del
+      diseño, estos puntos también son conocidos como puntos de extensión, los
+      cuales no son parte del flujo principal, pero sirven para modelar la parte
+      opcional del sistema que sólo se ejecuta bajo ciertas condiciones, esta
+      relación tiene como estereotipo la palabra. Generalización y
+      especialización.
+    </p>
+    <h3>Caso práctico</h3>
+    <p>
+      El presente caso práctico pretende mostrar al aprendiz el desarrollo de un
+      diagrama de casos de uso paso a paso basado en una descripción de un
+      problema que presenta un cliente determinado sistema de software para el
+      registro de las ventas de teléfonos celulares
+    </p>
+    <h4>La empresa de venta de aparatos de telefonía móvil</h4>
+    <p>
+      Comunicación Empresarial, es una organización con más de 15 años de
+      experiencia en comercio de equipos de comunicación telefónica móvil a
+      nivel nacional. Esta se encarga de comprar equipos celulares de gama baja,
+      media y alta al público en general; y la venta de equipos de telefonía
+      corporativa a las empresas que requieran comunicación de más alto nivel.
+      Lenibo y Howei para equipos de nivel corporativo y comunicaciones de alto
+      nivel. Comunicación Empresarial pretende desarrollar un módulo que
+      facilite la venta de los equipos de telefonía celular y a su vez mantenga
+      informado al personal encargado del inventario para que haga la solicitud
+      de nuevos equipos cuando las referencias se han agotado. La empresa
+      solicita que el sistema tenga las siguientes funciones principales
+    </p>
+    <h5>Registro de clientes</h5>
+    <p>
+      antes de realizar la venta, se debe realizar el registro de los clientes
+      verificando primero que no exista, en cuyo caso se solicitarán los
+      siguientes datos:
+    </p>
+    <ol>
+      <li>Nombres y apellidos</li>
+      <li>Cédula</li>
+      <li>Dirección</li>
+      <li>Teléfono de contacto</li>
+      <li>Dirección de correo electrónico</li>
+      <li>Fecha de nacimiento</li>
+    </ol>
+    <h5>Facturaciòn del Equipo</h5>
+    <p>
+      esta actividad debe ser primordial y hacer uso de los pasos anteriores,
+      aquí se debe solicitar el medio de pago que está conformado por tarjeta de
+      crédito, tarjeta débito o efectivo, luego de esto se debe preguntar si el
+      equipo tiene una línea propia o el cliente comprará la línea en la empresa
+      por lo que opcional se deberá registrar la línea y luego de la venta
+      informar al encargado del inventario. Venta de la línea: para realizar la
+      venta de una línea, al igual que en la venta del equipo, se requiere que
+      se registre el cliente, y luego de esto se solicita al vendedor el número
+      de línea y el IMEI del equipo para que esta quede registrada como pide la
+      legislación colombiana. En este caso es opcional que se informe al
+      encargado del inventario ya que las sim card se consiguen por separado a
+      la empresa. Informar al inventario: el proceso de informar al inventario
+      consiste en enviar un correo electrónico a empleado con los datos del
+      equipo o la línea que se ha vendido. Generar factura: luego de la venta se
+      genera la factura con todos los detalles que el cliente ha comprado, los
+      datos del cliente y la empresa que desarrollo el modelo
+    </p>
+    <h5>Registrar Cliente</h5>
+    <p>
+      Verificar existencias del equipo. Registro del equipo celular. Facturación
+      del equipo. Venta de la línea. Informar al inventario. Generar factura.
+    </p>
+    <h5>Vendedor, encargado del inventario</h5>
+    <p>
+      Luego como ya se ha logrado identificar cuáles son los requisitos
+      funcionales, se procede a ingresar cada caso de uso, en esta ocasión uno
+      por cada requisito. Cabe resaltar en este punto que a pesar que se tienen
+      7 requisitos funcionales, el diagrama cuenta con 9 casos de uso, esto
+      debido a que, aunque el documento no lo dice, el caso de verificación de
+      existencia de los clientes es un proceso que se realiza por separado, y el
+      caso de vender elemento es abstracto es decir su función está incompleta y
+      debe ser generalizado por facturar simcard y facturar teléfono para
+      completar una de las dos acciones o las dos. Ahora para poder continuar se
+      debe proceder a identificar claramente las relaciones entre los casos de
+      uso y los actores, en este punto es recomendable notar que entre el caso
+      principal y el actor la única relación que existirá es una asociación ya
+      que es el vendedor quien inicia las acciones, y se toma al caso vender
+      elemento como caso principal, pues como se pudo identificar antes facturar
+      sim o facturar teléfono se especializan en este por lo que la relación con
+      el actor automáticamente se hereda. Así se indica que tanto facturar
+      teléfono como facturar simcard tienen funcionalidades encontradas en el
+      caso vender elemento. El caso vender elemento aunque está generalizado,
+      aun así no ha completado su accionar, debido a que tanto facturar teléfono
+      como facturar línea requieren de verificarse el cliente y opcionalmente
+      registrarlo; en caso de no existir, para este propósito, en lugar de hacer
+      que los casos de facturación usen directamente a los casos de verificación
+      y creación de clientes se hará que el caso «Vender elemento» sea quien se
+      relacione con ellos debido a que estas relaciones son heredadas por los
+      casos ya generalizados es decir «facturar teléfono» y «facturar Simcard».
+    </p>
+    <h6>Inclusión</h6>
+    <p>
+      Una vez se ha terminado de identificar las relaciones entre todos los
+      casos, se puede dar por terminado el modelo mediante el diagrama de casos
+      de uso, luego de esto se deberá especificar cada uno de ellos mediante la
+      documentación de cada caso, algo que no se hará en este ejercicio puesto
+      que para este modelo resultará extenso, se recomienda al aprendiz que
+      practique con este modelo documentado y consultando al instructor sobre la
+      misma.
+    </p>
+    <h2>¿Qué es la ingeniería de requerimientos?</h2>
+    <p>
+      Ciencia y disciplina de interpretar, identificar, documentar los
+      requerimientos de un sistema. Mediante la transformación de las
+      necesidades de los clientes y usuarios dando soluciones digitales, los
+      diseñadores deben descomponer estas necesidades en varios problemas
+      pequeños y transformarlos en requerimientos más detallados para los
+      diseñadores y arquitectos del software.
+    </p>
+    <p>La ingeniería de requerimientos se divide en tres procesos que son:</p>
+    <ul>
+      <li>Necesidades</li>
+      <li>Funcionalidades</li>
+      <li>Requerimientos de software</li>
+    </ul>
+    <p>
+      Cuando una compañía que se dedica a la creación de programas de software y
+      resuelve las necesidades de los clientes, produce beneficios económicos
+      para la empresa que da esa solución, de tal manera que se justifica la
+      creación de dicho software, se debe identificar plena mente las
+      necesidades de los clientes y de los usuarios y darle solución plenamente.
+      Un cliente es cualquier persona que tiene necesidades de un proyecto de
+      forma indirecta, como por ejemplo para poder incrementar las ventas de sus
+      productos y/o servicios que brinda a terceros. Un usuario es un individuo
+      que va a interactuar con el sistema como posible comprador de los
+      servicios del cliente que compra el software. El área es la funcionalidad
+      que el sistema provee para resolver las necesidades de los clientes y de
+      los usuarios.
+    </p>
+    <p>Los requerimientos de software pueden ser:</p>
+    <p>
+      a. Capacidad suficiente para resolver un problema y para alcanzar un
+      objetivo, debe estar debidamente documentado el proceso.
+    </p>
+    <p>
+      b. Los requerimientos deben derivarse de funcionalidades del software,
+      deben ser muy específicos para poder derivar códigos a partir de ellos.
+    </p>
+    <p>
+      c. Los requerimientos tienen una importancia fundamental, las ventajas de
+      una buena especificación proporciona.
+    </p>
+    <p>
+      * Permiten establecer un acuerdo entre los desarrolladores, clientes y
+      usuarios acerca del trabajo que se va a realizar y sobre los criterios de
+      aceptación del producto terminado.
+    </p>
+    <p>* Permite establecer tiempo de creación, costos y recursos a emplear</p>
+    <p>
+      * Mejora características del producto final como: usabilidad, desempeño,
+      facilidad de mantenimiento.
+    </p>
+    <p>
+      d. La falta y deficiencias en la especificación de requerimientos puede
+      llevar a una catástrofe.
+    </p>
+    <p>
+      * En algunas ocasiones los clientes quieren que se disminuya el tiempo
+      para reducir gastos, no se tiene en cuenta que el verdadero valor está en
+      una programación adecuada de los códigos.
+    </p>
+    <p>
+      * Falta de cooperación de los clientes para verificar que los
+      requerimientos capturados u obtenidos se han los correctos y falta de
+      comprensión de la importancia de las especificaciones.
+    </p>
+    <p>
+      * Falta de entrenamiento de los analistas en técnicas para la
+      identificación y captura de requerimientos.
+    </p>
+    <p>
+      * Practica errada de los gerentes de poner personal con poca experiencia y
+      conocimiento para desarrollar software importante y de gran
+      responsabilidad, esto genera quiebres al proceso de creación de dichos
+      programas.
+    </p>
+    <p>
+      * Tener en cuenta que los proyectos intensivos en software son complejos,
+      adicionalmente en proyectos grandes los problemas aumentan cuando el
+      tamaño del proyecto se incrementa.
+    </p>
+    <p>
+      e. La ingeniería de requerimientos debe enfocarse en resolver incógnitas
+      como: ¿cómo deben desarrollarse los requerimientos de un sistema?, ¿cómo
+      podemos evaluar que los requerimientos de un sistema están completos?,
+      ¿Que estándares, herramientas y métodos pueden ayudar con el problema de
+      los requerimientos?
+    </p>
+    <p>
+      d. La ingeniería de requisitos tan bien busca nuevas y mejores formas para
+      desarrollar los requerimientos por medio de diferentes procesos:
+    </p>
+    <p>
+      * Elicitación: proceso de revisión de las especificaciones que debe tener
+      el software estos pasos los definen el cliente y el analista de software.
+    </p>
+    <p>
+      *Análisis: Proceso mediante el cual se definen las necesidades de los
+      clientes y de los usuarios
+    </p>
+    <p>
+      *Especificación: Es del desarrollo de un documento que define de manera
+      clara los requerimientos del software.
+    </p>
+    <p>
+      * Verificación: es el proceso mediante el cual nos aseguramos que la
+      especificación de los requerimientos cumple con los estándares definidos.
+    </p>
+    <p>
+      *Incentivar a que los clientes manifiesten sus preguntas e inconformidades
+      cuanto antes en el proceso de desarrollo.
+    </p>
+    <h3>El síndrome de «sí, pero.».</h3>
+    <p>
+      Este síndrome es uno de los problemas más frustrantes y persistentes en un
+      proyecto de software.
+    </p>
+    <p>
+      La causa de este síndrome es parte de la naturaleza misma del software
+      como un proceso intelectual intangible. La reacción del usuario es parte
+      de la naturaleza humana y ocurre en otras situaciones del día a día, el
+      motivo es que después de muchos meses de desarrollo ahora es capaz de
+      entender que es lo que el desarrollador quería decir cuando explicaba una
+      u otra funcionalidad del sistema. La manera en la que podemos reducir
+      significativamente el impacto de este síndrome es aplicar técnicas que
+      permitan que los «peros» de clientes y usuarios se produzcan cuanto antes
+      en el proceso de desarrollo. Esto puede llevar a otro síndrome conocido en
+      la administración de proyectos como «parálisis por análisis», que consiste
+      en que el proyecto se estanca indefinidamente en un proceso de
+      identificación de requerimientos que paraliza al proyecto hasta provocar
+      su cancelación.
+    </p>
+    <h3>El proceso de Elicitación puede describirse en cuatro pasos</h3>
+    <p>
+      Entender las necesidades de los clientes y usuarios. El proceso de
+      Elicitación inicia con la identificación del problema que se va a
+      resolver. Es importante que la definición del problema sea consensada por
+      el cliente y todos los involucrados en el proceso de desarrollo. Es común
+      que, en el proceso de identificación del problema, la gente pregunte si el
+      problema debe ser sólo uno. La respuesta es sí, cada proyecto debe de
+      tener un sólo enunciado del problema, el enunciado debe ser el de más alto
+      orden encontrado.
+    </p>
+    <p>Por ejemplo:</p>
+
+    <p>
+      . El director del hospital llegó a la conclusión de que es necesario
+      comprar un nuevo sistema de facturación para evitar seguir perdiendo
+      clientes.
+    </p>
+    <p>. El sistema actual no permite dividir una cuenta en varias facturas</p>
+    <p>
+      . El área de Laboratorio no está conectada al sistema del hospital por lo
+      que los cargos a la cuenta del paciente se hacen a través del área de
+      farmacia
+    </p>
+    <p>. El sistema no permite cambios una vez que se cierra la factura.</p>
+    <p>
+      En ocasiones algún área del hospital informa de algún cargo pendiente
+      después de que el cajero cerró la factura, o el cliente nota que su nombre
+      o su dirección están incorrectas. Una vez que se ha alcanzado un acuerdo
+      sobre el problema que se va a construir, es necesario definir un sistema
+      que pueda ser construido para resolver el problema. Para hacer esta tarea
+      debemos comenzar con establecer las fronteras dentro de las cuales se
+      creará el sistema. Una manera de acotar un sistema es ponerlo en el
+      contexto de los elementos externos que van a interactuar con él. En el
+      inicio de un proyecto es conveniente establecer qué partes de la solución
+      forman parte del proyecto de construcción del sistema, y qué partes van a
+      interactuar con el sistema como elementos externos o actores.
+    </p>
+    <p>
+      Una herramienta que nos permite documentar las fronteras del proyecto es
+      el diagrama de contexto.
+    </p>
+    <p>Solución:</p>
+
+    <p>
+      Existen diferentes tipos de restricciones que pueden presentarse en un
+      proyecto. Cada restricción debe considerarse dentro del proceso de
+      planeación para analizar su impacto y determinar qué estrategia se
+      empleará para cumplirla.
+    </p>
+    <p>
+      Una vez identificadas algunas de las restricciones se volverán
+      requerimientos del sistema que vamos a construir, otras restricciones
+      afectarán recursos, planes de implementación y planes del proyecto.
+    </p>
+    <h4>En tender las necesidades de los clientes y de los usuarios</h4>
+    <p>
+      Entender las necesidades de clientes y usuarios es una parte fundamental
+      de la Elicitación de un proyecto. Para entender las necesidades de estas
+      personas hay que empezar por identificarlos.
+    </p>
+    <p>
+      La siguiente sección describe esas técnicas y algunas herramientas que
+      ayudan a entender cuáles son las necesidades de los usuarios respecto al
+      sistema que se va a construir.
+    </p>
+    <h2>Técnicas de Elicitación</h2>
+    <p>
+      Este proceso ha demostrado en la práctica que es muy complejo y que puede
+      fácilmente provocar el fracaso de un proyecto. Existen varias técnicas que
+      pueden utilizarse para la elicitación de un sistema, sin embargo, dada la
+      naturaleza social del proceso, el uso de las mismas debe considerar no
+      sólo los aspectos técnicos sino los aspectos sociales, políticos y
+      culturales del proyecto.
+    </p>
+    <h3>Introspección</h3>
+    <p>
+      La introspección es el medio más obvio y comúnmente usado para entender
+      los requerimientos de un sistema. Consiste en estudiar el ambiente del
+      usuario para posteriormente tratar de imaginar qué es lo que me gustaría
+      que hiciera el sistema si yo estuviera a cargo de hacer el trabajo con su
+      ayuda. Esta técnica es útil, pero hay que considerar que la experiencia de
+      un analista de sistemas es muy diferente que la experiencia de los
+      usuarios potenciales del software y por lo tanto es difícil que las
+      conclusiones del analista reflejen la experiencia de las personas que
+      hacen la tarea día con día. Esto se hace más evidente en el diseño de la
+      interfaz gráfica del usuario, lo que para un analista es el comportamiento
+      común de un software, puede resultar confuso o frustrante para un usuario.
+    </p>
+    <p>
+      Los expertos de dominio son personas con mucha experiencia en un área
+      particular del negocio que es de interés para el sistema. Por ejemplo, en
+      el caso de una línea de producción, el operador de alguna máquina de la
+      línea puede ser un experto de dominio que aporte valiosa información para
+      la automatización del proceso.
+    </p>
+    <h3>Abierta</h3>
+    <p>
+      Una de las técnicas más importantes y más directas para obtener
+      requerimientos es la entrevista abierta. El proceso de realizar una
+      entrevista puede parecer trivial en muchos casos, sin embargo, debido al
+      factor social que ya hemos mencionado y al «síndrome del usuario y el
+      desarrollador», las entrevistas pueden presentar complicaciones. Una
+      entrevista debe considerar preguntas libres de contexto, es decir,
+      preguntas que no influencien las respuestas de los entrevistados hacia las
+      respuestas que queremos oír.
+    </p>
+    <h2>Cuáles son sus necesidades respecto a la solución?</h2>
+    <p>
+      Cuando el analista escucha lo que el usuario tiene que decir respecto a
+      sus necesidades, se produce un mejor entendimiento del problema y por
+      tanto una solución adecuada. En esta estrategia el vendedor pregunta para
+      obtener información sobre la problemática del cliente antes de ofrecer un
+      producto o un servicio. Cuando el vendedor ha obtenido una visión clara de
+      la problemática del cliente, entonces propone algo que tiene sentido para
+      el cliente y entonces la venta se produce más fácilmente.
+    </p>
+    <p>
+      Haz preguntas abiertas que le permitan al usuario extenderse en sus
+      respuestas y a ti comprender mejor su problemática.
+    </p>
+    <h3>Algunas recomendaciones para conducir un grupo de desarrollo son:</h3>
+    <p>
+      Procura que la sesión se mantenga andando. Existe una tendencia natural a
+      que el workshop se convierta en una «sesión de quejas». Identifica los
+      problemas/requerimientos, pero no profundices.
+    </p>
+    <h4>Tormenta de Ideas</h4>
+    <p>
+      Una herramienta muy útil para lograr esto es la «tormenta de ideas». La
+      Tormenta de Ideas consiste en listar todas las ideas sobre un tema que se
+      le ocurren a un auditorio determinado y posteriormente filtrarlas,
+      desarrollarlas y priorizarlas. El objetivo es muy importante porque
+      permite mantener en foco la sesión, sin embargo, no debe de ser limitante
+      para la creatividad de las ideas expresadas, es más las ideas más
+      descabelladas pueden resultar en soluciones innovadoras. Los participantes
+      deben de aportar ideas sin interrupción y tantas como sea posible, para
+      lograr esto, el moderador debe crear un ambiente en el que la creatividad
+      y la apertura de mente tengan un lugar prioritario, por ejemplo, evitando
+      críticas o debates durante la aportación de ideas. Cuando las ideas
+      comienzan a repetirse y los participantes empiezan a demorarse mucho
+      tiempo entre idea e idea, es momento de suspender la sesión y pasar a
+      filtrar, combinar, ordenar y priorizar las ideas.
+    </p>
+    <h4>Storyboards</h4>
+    <p>
+      Sin embargo, es recomendable mantenerlos fáciles de hacer y de cambiar, ya
+      que en el fondo debe ser una herramienta barata que ayude a descubrir
+      requerimientos y necesidades por lo tanto su naturaleza será cambiar.
+      Cuando se tienen más claros los requerimientos o cuando se requiere un
+      producto para vender una necesidad a un cliente es más recomendable usar
+      los prototipos y los demos.
+    </p>
+    <h4>Análisis</h4>
+    <p>
+      El análisis de los requerimientos consiste en estudiar las necesidades de
+      los clientes para plantearlas en términos de un sistema de software. No
+      debe confundirse el análisis en el contexto de requerimientos y el
+      análisis en el contexto de actividades de análisis y diseño del sistema.
+      Por lo tanto, en el paradigma de objetos, una clasificación para las
+      actividades del ciclo de vida de desarrollo que suele usarse es
+      requerimientos, análisis y diseño y codificación.
+    </p>
+    <h4>Composición de elementos</h4>
+    <p>
+      Los elementos están conformados por elementos comunes que nos sirven para
+      un mismo fin, UML tiene estereotipos los cuales son unos mecanismos para
+      alterar lógicamente un significado.
+    </p>
+    <h4>Modelado de Requisitos</h4>
+    <p>
+      El caso de uso de uso de un sistema contiene los requisitos funcionales
+      deseados o existentes, los actores describen un rol que presentan os
+      usuarios en el sistema y las asociaciones que unen a actores y
+      funcionalidades.
+    </p>
+    <p>
+      Los casos de uso sirven como soporte para las etapas del modelado,
+      desarrollo y validación del software. Esto quiere decir que este es el
+      dialogo entre los desarrolladores y los clientes para definir las
+      funcionalidades del sistema.
+    </p>
+    <h4>Relación de Inclusión entre los sistemas de caso</h4>
+    <p>
+      La inclusión sirve para compartir una funcionalidad común entre varios
+      casos de uso describiendo sus subfunciones.
+    </p>
+    <p>Los casos de uso sirven para:</p>
+    <p>
+      - Expresar Requisitos funcionales para que los usuarios comunicaron al
+      sistema durante la redacción del pliego de condiciones.
+    </p>
+    <p>
+      - Comprobar que el sistema cumple dichos requisitos en el momento de la
+      entrega.
+    </p>
+    <p>- Determinar las fronteras del sistema.</p>
+    <p>
+      - Escribir la documentación del sistema Confeccionar los juegos del test.
+    </p>
+    <p>
+      - Los casos de uso sirven para dialogar con el usuario ya que su
+      formalismo es cercano al lenguaje natural. Se aconseja incorporar un
+      léxico para evitar posibles confusiones.
+    </p>
+  </body>
+</html>
